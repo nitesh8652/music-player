@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucos Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/musicmetadata/2.0.2/musicmetadata.min.js"></script>
+</head>
+
+<body>
+
+
+    <div class="logo">
+        <img src="assets/icon69.svg" alt="logo">
+        <ul>
+            <li class="playertitle">Lucas Player</li>
+        </ul>
+    </div>
+    <div class="search">
+        <div class="alignment">
+            <input type="text" name="text" class="input" placeholder="Search your music here!">
+            <!-- <input type="text" placeholder="Search your music here!"> -->
+            <button class="searchbtn">
+
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168Z">
+                    </path>
+                </svg>
+
+            </button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+            <h3> Library</h3>
+            <div class="library">
+                <ul>
+                    <li><img src="assets/home.svg" alt="home">
+                        <span class="centior">Home</span>
+                    </li>
+                    <li><img src="assets/heart.svg" alt="like">
+                        <span class="likor">Favorites</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="quecontainer">
+                <div class="que">
+                    <h4>Your Queue</h4>
+                    <!-- <input type="file" id="fileInput" accept=".mp3" multiple> -->
+
+
+                    <ul>
+                        <!-- <li>
+                            <img src="assets/library.svg" alt="library" class="libimg">
+                            <div class="info">
+
+                                <div id="songTitle"></div>
+                                <div id="songArtist"></div>
+                            </div>
+                            <div class="playmini">
+                                <span>Play</span>
+                                <img src="assets/play-mini-card.svg" alt="play">
+                            </div>
+                        </li> -->
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="center">
+            <ul>
+                <li>
+                    <img src="assets/album.svg" alt="albums">
+                    <span class="albu">Your Songs</span>
+                </li>
+            </ul>
+            <div class="cardcontainer">
+
+                <!-- <div class="cards">
+
+                    
+
+                    <div class="btntrns1">
+                        <button class="btn-95">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7.75194 5.43872L18.2596 11.5682C18.4981 11.7073 18.5787 12.0135 18.4396 12.252C18.3961 12.3265 18.3341 12.3885 18.2596 12.432L7.75194 18.5615C7.51341 18.7006 7.20725 18.62 7.06811 18.3815C7.0235 18.305 7 18.2181 7 18.1296V5.87061C7 5.59446 7.22386 5.37061 7.5 5.37061C7.58853 5.37061 7.67547 5.39411 7.75194 5.43872Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3>Glory</h3>
+                    <p>Yo Yo Honey Singh</p>
+                </div>
+
+                <div class="cards">
+                    <img src="assets/songpic.jfif" alt="stanny">
+                    <div class="btntrns1">
+                        <button class="btn-95">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M7.75194 5.43872L18.2596 11.5682C18.4981 11.7073 18.5787 12.0135 18.4396 12.252C18.3961 12.3265 18.3341 12.3885 18.2596 12.432L7.75194 18.5615C7.51341 18.7006 7.20725 18.62 7.06811 18.3815C7.0235 18.305 7 18.2181 7 18.1296V5.87061C7 5.59446 7.22386 5.37061 7.5 5.37061C7.58853 5.37061 7.67547 5.39411 7.75194 5.43872Z">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                    <h3>Glory</h3>
+                    <p>Yo Yo Honey Singh</p>
+                </div> -->
+
+                <!-- <img src="assets/songpic.jfif" alt="stanny"> -->
+
+                <div class="album-art">
+                    <img src="/assets/default-thumbnail.jpg" alt="Album Art" class="current-thumbnail">
+                </div>
+            </div>
+
+<!-- 
+            <div class="informationn">
+
+                <div class="runtime"></div>
+                <div class="trackinfo"> </div>
+                <div class="totaldura"></div>
+            
+            </div> -->
+
+
+
+            <div class="nav">
+                <div class="playbar">
+                    <div class="circle"></div>
+                </div>
+                <!-- previous -->
+                <div class="assebility">
+                    <img id="previous" src="assets/previous.svg" alt="previous">
+                    <!-- <img id="pause"src="assets/pause.svg" alt="pause"> -->
+                    <img id="play" src="assets/play.svg" alt="play">
+                    <img id="next" src="assets/next.svg" alt="next">
+                </div>
+
+
+
+                <div class="volumenav">
+                    <label class="slider">
+                        <input type="range" class="level">
+                        <svg class="volume" xmlns="http://www.w3.org/2000/svg" version="1.1"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                            viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                            <g>
+                                <path
+                                    d="M18.36 19.36a1 1 0 0 1-.705-1.71C19.167 16.148 20 14.142 20 12s-.833-4.148-2.345-5.65a1 1 0 1 1 1.41-1.419C20.958 6.812 22 9.322 22 12s-1.042 5.188-2.935 7.069a.997.997 0 0 1-.705.291z"
+                                    fill="black" data-original="#000000"></path>
+                                <path
+                                    d="M15.53 16.53a.999.999 0 0 1-.703-1.711C15.572 14.082 16 13.054 16 12s-.428-2.082-1.173-2.819a1 1 0 1 1 1.406-1.422A6 6 0 0 1 18 12a6 6 0 0 1-1.767 4.241.996.996 0 0 1-.703.289zM12 22a1 1 0 0 1-.707-.293L6.586 17H4c-1.103 0-2-.897-2-2V9c0-1.103.897-2 2-2h2.586l4.707-4.707A.998.998 0 0 1 13 3v18a1 1 0 0 1-1 1z"
+                                    fill="black" data-original="#000000"></path>
+                            </g>
+                        </svg>
+                    </label>
+                </div>
+
+                
+            <div class="informationn">
+
+                <div class="runtime"></div>
+                <div class="trackinfo"> </div>
+                <div class="totaldura"></div>
+            
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- <div class="nav">
+        <div class="kili">
+            <div class="asscebility"></div>
+        </div>
+    </div> -->
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+<!-- #111827 -->
