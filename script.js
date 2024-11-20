@@ -1,6 +1,10 @@
 let currentsong = new Audio();
 let mp3 = []
 let rndmsgselected = false;
+let shuffleque = []
+let suffleonoff = false
+let currentindex = 0;
+
 
 async function fetchingsngs() {
 
@@ -46,13 +50,13 @@ const playingmusic = (currenttrack) => {
 
     })
 
-    
+
     document.querySelectorAll(".cards").forEach(card => {
-        card.addEventListener("click",()=>{
+        card.addEventListener("click", () => {
             const currenttrack = card.getAttribute("data-song-id");
             li.classList.toggle("choosenone");
-            const li =document.querySelector(`.cards[data-list-id="${currenttrack}"]`);
-            card.classList.toggle("hehe",true);
+            const li = document.querySelector(`.cards[data-list-id="${currenttrack}"]`);
+            card.classList.toggle("hehe", true);
         })
     })
 
@@ -66,7 +70,10 @@ const playingmusic = (currenttrack) => {
     })
 
 
-
+    // if (!rndmsgselected) {
+    //     const randomindex = Math.floor(Math.random() * mp3.length);
+    //     const randomsong = mp3[randomindex];
+    //     playingmusic(randomsong);
 
     rndmsgselected = true;
 }
@@ -80,9 +87,6 @@ async function main() {
     console.log(mp3);
 
     let songlist = document.querySelector(".que").getElementsByTagName("ul")[0];
-
-
-//  class="cards" data-song-id="${song}"
 
     for (const song of mp3) {
         songlist.innerHTML = songlist.innerHTML +
@@ -98,9 +102,6 @@ async function main() {
                             </div></li>`;
     }
 
-    
- 
-
     Array.from(document.querySelector(".que").getElementsByTagName("li")).forEach(e => {
         e.addEventListener("click", element => {
             console.log(e.querySelector(".info").firstElementChild.innerHTML)
@@ -108,14 +109,14 @@ async function main() {
         })
     })
 
-
-
     play.addEventListener("click", () => {
 
         if (!rndmsgselected) {
             const randomindex = Math.floor(Math.random() * mp3.length);
             const randomsong = mp3[randomindex];
             playingmusic(randomsong);
+            const songtoplay= suffleonoff?getnextsuffle():mp3[0];
+            playingmusic(songtoplay);
         } else {
 
             if (currentsong.paused) {
@@ -125,6 +126,7 @@ async function main() {
                 setTimeout(() => {
                     play.src = "assets/pause.svg";
                     play.style.opacity = "1";
+                    li.classList.add("hehe");
 
                 }, 200);
             } else {
@@ -140,7 +142,44 @@ async function main() {
 
         }
 
+        
     });
+
+    document.querySelector(".shuffle").addEventListener("click",()=>{
+        suffleonoff=!suffleonoff
+
+        if (suffleonoff){
+            document.querySelector(".shuffle").classList.add("active");
+        }else{
+            document.querySelector(".shuffle").classList.remove("active");
+            shuffleque=[]
+        }
+    })
+
+    function getnextsuffle(){
+        if (shuffleque.length===0){
+            shuffleque=[...mp3];
+        }
+
+        const randomindex = Math.floor(Math.random()*shuffleque.length);
+        const nextsng = shuffleque[randomindex];
+
+        shuffleque.splice(randomindex,1);
+        return nextsng
+        console.log("huu")
+    }
+
+    function playrandomnextsng(){
+        if(suffleonoff){
+            const nextsng = getnextsuffle();
+            playingmusic(nextsng)
+        }else{
+            let currentrndmindex=mp3.indexOf(currentsong.src.split("/").pop())
+            let nextindex=(currentrndmindex)%mp3.length;
+            playingmusic(mp3[nextindex]);
+        }
+    }
+
 
 
     currentsong.addEventListener("loadedmetadata", () => {
@@ -183,7 +222,9 @@ async function main() {
         let nextindex = mp3.indexOf(currentsong.src.split("/").slice(-1)[0]);
         let nextlastindex = (nextindex + 1) % mp3.length;
         playingmusic(mp3[nextlastindex]);
+        playrandomnextsng();
     })
+
 
     document.querySelector(".slider input").addEventListener("input", (e) => {
         currentsong.volume = parseInt(e.target.value) / 100
@@ -259,6 +300,22 @@ async function main() {
     }
 
     loadSongsIntoCards();
+
+
+
+    // function loadWebsite() {
+    //     // Set the src of the iframe to the desired website
+    //     const iframe = document.getElementById('websiteFrame');
+    //     iframe.src = "https://www.boomplay.com/#google_vignette";
+    // }
+
+    document.querySelector(".likor").addEventListener("click", () => {
+        //how can i add a link of another web page when the user clicks it
+        window.open("https://music.youtube.com/");
+    })
+
+
+
 
 
 
