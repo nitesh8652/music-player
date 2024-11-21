@@ -877,6 +877,7 @@ h3 {
     top: 40px;
     position: relative;
     width: 197%;
+    display: flex;
 }
 
 /* .link:hover {
@@ -890,4 +891,44 @@ cursor: pointer;
 
 .active{
     background-color: gold;
+}
+
+
+
+
+
+.sleeptimer {
+    margin-left: 322px;
+    border: 1px solid aliceblue;
+    height: 71%;
+    position: absolute;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+}
+
+#canceltimer {
+    background-color: red;
+    color: white;
+}
+
+.timmings{
+    background-color: blue;
+    width: 41%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    position: absolute;
+    flex-direction: column;
+    height: 120px;
+
+}
+
+
+.timeressential{
+    margin-top: 20px;
 }

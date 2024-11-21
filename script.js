@@ -4,6 +4,7 @@ let rndmsgselected = false;
 let shuffleque = []
 let suffleonoff = false
 let currentindex = 0;
+let sleeptimer=null;
 
 
 async function fetchingsngs() {
@@ -302,13 +303,6 @@ async function main() {
     loadSongsIntoCards();
 
 
-
-    // function loadWebsite() {
-    //     // Set the src of the iframe to the desired website
-    //     const iframe = document.getElementById('websiteFrame');
-    //     iframe.src = "https://www.boomplay.com/#google_vignette";
-    // }
-
     document.querySelector(".likor").addEventListener("click", () => {
         //how can i add a link of another web page when the user clicks it
         window.open("https://music.youtube.com/");
@@ -316,9 +310,36 @@ async function main() {
 
 
 
+    document.getElementById("settimer").addEventListener("click",()=>{
+        const minutes = parseInt(document.getElementById("timer").value);
+        if (isNaN(minutes)|| minutes <=0){
+            alert("Please Enter A valid meow");
+            return;
+        }
+        const duration = minutes *60 *1000;
 
+        if(sleeptimer){
+            clearTimeout(sleeptimer);
+        }
 
+        sleeptimer=setTimeout(()=>{
+            currentsong.pause();
+            alert("Time's Up");
+            document.getElementById("canceltimer").style.display="none";
+        },duration)
 
+        alert("timer set for ${minutes}minutes")
+        document.getElementById("canceltimer").style.display="inline-block";
+
+    });
+
+    document.getElementById("canceltimer").addEventListener("click",()=>{
+        if(sleeptimer){
+            clearTimeout(sleeptimer);
+            alert("sleeptimer was cancer")
+            document.getElementById("canceltimer").style.display = "none";
+        }
+    })
 
 
 
