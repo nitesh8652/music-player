@@ -179,7 +179,7 @@
                 </div>
 
 
-                <label for="timer">
+                <label for="timer" class="timerimg">
 
                     <img src="assets/sleeptimer.svg" alt="sleeptimer">
 
@@ -205,12 +205,56 @@
 
         <div class="sleeptimer">
             <div class="timmings">
+                <div class="centertimer">
                 <input type="number" id="timer" min="1" placeholder="enter minus">
                 <div class="timeressential">
-                    <button id="settimer"> Set Timer</button>
-                    <button id="canceltimer">Cancel Timer</button>
+                        <button id="settimer"> Set Timer</button>
+                        <button id="canceltimer">Cancel Timer</button>
+                        <div class="close">
+                            <button class="button">
+                                close
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="alert">
+                Enter A Valid Number!
+                <button class="ok">ok</button>
+
+            </div>
+            <div class="timeup">
+                Time's Up Have A Good Sleep
+                <button class="timeupbtn">Close</button>
+
+                <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+                    <div class="wheel"></div>
+                    <div class="hamster">
+                        <div class="hamster__body">
+                            <div class="hamster__head">
+                                <div class="hamster__ear"></div>
+                                <div class="hamster__eye"></div>
+                                <div class="hamster__nose"></div>
+                            </div>
+                            <div class="hamster__limb hamster__limb--fr"></div>
+                            <div class="hamster__limb hamster__limb--fl"></div>
+                            <div class="hamster__limb hamster__limb--br"></div>
+                            <div class="hamster__limb hamster__limb--bl"></div>
+                            <div class="hamster__tail"></div>
+                        </div>
+                    </div>
+                    <div class="spoke"></div>
+                </div>
+
+            </div>
+
+            <div class="timercancel">
+                Sleep TImer Was Cancelled
+                <button class="timercancelbtn">Close</button>
+            </div>
+
+
+
         </div>
     </div>
 

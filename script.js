@@ -309,11 +309,26 @@ async function main() {
     })
 
 
+    document.querySelector(".ok").addEventListener("click",()=>{
+        const close = document.querySelector(".alert");
+        close.style.display="none";
+    })
+
+    document.querySelector(".timeupbtn").addEventListener("click",()=>{
+        const timeup = document.querySelector(".timeup");
+        timeup.style.display="none";
+    })
+
+    document.querySelector(".timercancelbtn").addEventListener("click",()=>{
+        const timecancel = document.querySelector(".timercancel");
+        timecancel.style.display="none";
+    })
 
     document.getElementById("settimer").addEventListener("click",()=>{
         const minutes = parseInt(document.getElementById("timer").value);
         if (isNaN(minutes)|| minutes <=0){
-            alert("Please Enter A valid meow");
+            // alert("Please Enter A valid meow");
+            document.querySelector(".alert").style.display="inline-block";
             return;
         }
         const duration = minutes *60 *1000;
@@ -325,11 +340,11 @@ async function main() {
         sleeptimer=setTimeout(()=>{
             currentsong.pause();
             alert("Time's Up");
-            document.getElementById("canceltimer").style.display="none";
+          document.querySelector(".timeup").style.display="inline-block";
         },duration)
 
-        alert("timer set for ${minutes}minutes")
-        document.getElementById("canceltimer").style.display="inline-block";
+        alert(`timer set for ${minutes}minutes`)
+        // document.getElementById("canceltimer").style.display="inline-block";
 
     });
 
@@ -337,11 +352,20 @@ async function main() {
         if(sleeptimer){
             clearTimeout(sleeptimer);
             alert("sleeptimer was cancer")
-            document.getElementById("canceltimer").style.display = "none";
+            document.querySelector(".timercancel").style.display="inline-block";
+            // document.querySelector(".canceltimer").style.display = "none";
         }
     })
 
+    document.querySelector(".button").addEventListener("click",()=>{
+        const maintimer= document.querySelector(".timmings")
+        maintimer.style.display="none";
+    })
 
+    document.querySelector(".timerimg").addEventListener("click",()=>{
+        const maintimerdisplay= document.querySelector(".timmings")
+        maintimerdisplay.style.display="inline-block";
+    })
 
 }
 
