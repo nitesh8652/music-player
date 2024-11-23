@@ -357,7 +357,7 @@ async function main() {
         }
     })
 
-    document.querySelector(".button").addEventListener("click",()=>{
+    document.querySelector(".btn-65").addEventListener("click",()=>{
         const maintimer= document.querySelector(".timmings")
         maintimer.style.display="none";
     })
