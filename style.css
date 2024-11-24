@@ -908,7 +908,6 @@ h3 {
 
 .sleeptimer {
     margin-left: 678px;
-    /* border: 1px solid aliceblue; */
     height: 71%;
     position: absolute;
     width: 21%;
@@ -916,8 +915,8 @@ h3 {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    /* border: 3px solid gold; */
     overflow: hidden;
+    pointer-events: none;
 }
 
 #canceltimer {
@@ -931,15 +930,27 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    pointer-events: auto;
     position: absolute;
     flex-direction: column;
     height: 258px;
     border-radius: 8px;
     display: none;
     overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
+.timmings.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popups.active {
+    display: flex;
+    pointer-events: auto;
+    /* Allow interactions for visible state */
+}
 
 .timeressential {
     margin-top: 20px;
@@ -1412,7 +1423,7 @@ h3 {
 .close {
     position: relative;
     top: 50px;
-    left: 26px;
+    left: 43px;
     font-weight: 900;
 }
 
@@ -1422,40 +1433,46 @@ h3 {
 .btn-65 :before,
 .btn-65:after,
 .btn-65:before {
-  border: 0 solid;
-  box-sizing: border-box;
+    border: 0 solid;
+    box-sizing: border-box;
 
 }
+
 .btn-65 {
-  -webkit-tap-highlight-color: 
-transparent;
-  -webkit-appearance: button;
-  background-color: 
-#000;
-  background-image: none;
-  color: 
-#fff;
-  cursor: pointer;
- 
-  font-size: 100%;
-  font-weight: 900;
-  line-height: 1.5;
-  margin: 0;
-  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
-  text-transform: uppercase;
+    -webkit-tap-highlight-color:
+        transparent;
+    -webkit-appearance: button;
+    background-color:
+        #000;
+    background-image: none;
+    color:
+        #fff;
+    cursor: pointer;
+
+    font-size: 100%;
+    font-weight: 900;
+    line-height: 1.5;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    text-transform: uppercase;
 }
+
 .btn-65:disabled {
-  cursor: default;
+    cursor: default;
 }
+
 .btn-65:-moz-focusring {
-  outline: auto;
+    outline: auto;
 }
+
 .btn-65 svg {
-  vertical-align: middle;
+    vertical-align: middle;
 }
+
 .btn-65 [hidden] {
-  display: none;
+    display: none;
 }
+
 .btn-65 {
     background: hsla(0, 0%, 100%, 0.2);
     background-clip: content-box;
@@ -1469,39 +1486,54 @@ transparent;
     transition: 0.2s;
     width: 52px;
 }
+
 .btn-65:hover {
-  background: 
-#ffffff;
+    background:
+        #ffffff;
 }
+
 .btn-65 svg {
-  --size: 45px;
-  fill: 
-#fff;
-  display: block;
-  height: var(--size);
-  left: calc(50% - var(--size) / 2);
-  position: absolute;
-  top: calc(50% - var(--size) / 2);
-  width: var(--size);
-  
+    --size: 45px;
+    fill:
+        #fff;
+    display: block;
+    height: var(--size);
+    left: calc(50% - var(--size) / 2);
+    position: absolute;
+    top: calc(50% - var(--size) / 2);
+    width: var(--size);
+
 }
+
 .btn-65:hover svg {
-  fill: 
-#000;
+    fill:
+        #000;
 }
+
 .btn-65:before {
-  border: 5px solid 
-#000000;
-  border-radius: 50%;
-  content: "";
-  inset: 1px;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  transform: scale(2);
-  transition: 0.2s;
+    border: 5px solid #000000;
+    border-radius: 50%;
+    content: "";
+    inset: 1px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: scale(2);
+    transition: 0.2s;
 }
+
 .btn-65:hover:before {
-  opacity: 1;
-  transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+
+.equilizer{
+    z-index: 999999;
 }

@@ -6,6 +6,11 @@ let suffleonoff = false
 let currentindex = 0;
 let sleeptimer=null;
 
+let audiocontext;
+let sourceNode;
+let gainNode;
+let bassFilter;
+let trebleFilter;
 
 async function fetchingsngs() {
 
@@ -32,12 +37,15 @@ const playingmusic = (currenttrack) => {
 
 
     currentsong.src = "/songs/" + currenttrack;
+    
     currentsong.play()
     play.src = "assets/pause.svg";
 
     document.querySelector(".runtime").innerHTML = "00:00";
     document.querySelector(".totaldura").innerHTML = "00:00";
     document.querySelector(".trackinfo").innerHTML = decodeURI(currenttrack);
+
+
 
     // document.querySelector(".heart-container").innerHTML=`<img src="assets/heart.svg" alt="heart">`;
 
@@ -214,7 +222,7 @@ async function main() {
         let previndex = mp3.indexOf(currentsong.src.split("/").slice(-1)[0]);
         let previouslastindex = (previndex - 1) % mp3.length;
         playingmusic(mp3[previouslastindex]);
-        console.log("clic")
+        console.log("clicke")
 
     })
 
@@ -360,12 +368,61 @@ async function main() {
     document.querySelector(".btn-65").addEventListener("click",()=>{
         const maintimer= document.querySelector(".timmings")
         maintimer.style.display="none";
+
     })
 
     document.querySelector(".timerimg").addEventListener("click",()=>{
         const maintimerdisplay= document.querySelector(".timmings")
-        maintimerdisplay.style.display="inline-block";
+        maintimerdisplay.style.display="inline-block";  
     })
+
+    const popups  = document.querySelector(".popups");
+
+    popups.addEventListener("click",()=>{
+        popups.classList.add('active')
+    })
+
+    document.querySelector(".timerimg").addEventListener("click",()=>{
+        document.querySelector(".timmings").classList.add('active')
+    })
+
+
+    // function setupauido(){
+    //     if(!audiocontext){
+    //         audiocontext=new audiocontext()
+
+    //         gainNode = audiocontext.createGain();
+    //         bassFilter = audiocontext.createBiquadFilter();
+    //         bassFilter.type="lowshelf";
+    //         bassFilter.frequency.value=200;
+
+    //         bassFilter.connect(gainNode);
+    //         gainNode.connect(audioContext.destination);
+    //     }
+    // }
+  
+// function connectauidosrc(audioelemnt){
+//     if(!audiocontext)setupauido();
+
+//     if(sourceNode) sourceNode.disconnect();
+
+//     sourceNode = audioContext.createMediaElementSource(audioelemnt);
+//     sourceNode.connect(bassFilter);
+// }
+
+
+
+// document.querySelector(".bassrange").addEventListener("input",(event)=>{
+//     bassFilter.gain.value=event.target.value
+// });
+
+
+   
+
+
+
+
+
 
 }
 
