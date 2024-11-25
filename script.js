@@ -387,6 +387,25 @@ async function main() {
     })
 
 
+document.querySelector(".input").addEventListener("input",event=>{
+    const search = event.target.value.toLowerCase();
+    const allcards=document.querySelectorAll(".cards");
+
+    allcards.forEach((card)=>{
+        const name = card.querySelector("h3").innerText.toLowerCase();
+        if(name.includes(search)){
+            card.style.display="block"
+        }else{
+            card.style.display="none"
+        }
+    })
+})
+
+
+
+
+
+
     // function setupauido(){
     //     if(!audiocontext){
     //         audiocontext=new audiocontext()
