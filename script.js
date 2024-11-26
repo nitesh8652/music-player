@@ -347,19 +347,23 @@ async function main() {
 
         sleeptimer=setTimeout(()=>{
             currentsong.pause();
-            alert("Time's Up");
+            // alert("Time's Up");
           document.querySelector(".timeup").style.display="inline-block";
+          document.querySelector(".peace").style.display="inline-block";
         },duration)
+
 
         alert(`timer set for ${minutes}minutes`)
         // document.getElementById("canceltimer").style.display="inline-block";
 
+        console.log(minutes)
+       
     });
 
     document.getElementById("canceltimer").addEventListener("click",()=>{
         if(sleeptimer){
             clearTimeout(sleeptimer);
-            alert("sleeptimer was cancer")
+            // alert("sleeptimer was cancer")
             document.querySelector(".timercancel").style.display="inline-block";
             // document.querySelector(".canceltimer").style.display = "none";
         }
@@ -371,7 +375,7 @@ async function main() {
 
     })
 
-    document.querySelector(".timerimg").addEventListener("click",()=>{
+    document.querySelector(".libraryitem").addEventListener("click",()=>{
         const maintimerdisplay= document.querySelector(".timmings")
         maintimerdisplay.style.display="inline-block";  
     })
@@ -382,7 +386,7 @@ async function main() {
         popups.classList.add('active')
     })
 
-    document.querySelector(".timerimg").addEventListener("click",()=>{
+    document.querySelector(".libraryitem").addEventListener("click",()=>{
         document.querySelector(".timmings").classList.add('active')
     })
 

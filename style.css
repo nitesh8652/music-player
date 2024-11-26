@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 :root {
     --a: 0;
@@ -18,7 +20,7 @@
 }
 
 body {
-    background-color: #222222;
+    background-color: #282828;
     color: white;
 }
 
@@ -191,7 +193,7 @@ button svg {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+
     padding-right: 12px;
     font-size: 19px;
     margin: 12px;
@@ -211,9 +213,12 @@ button svg {
 }
 
 .library ul li img {
+    left: 3px;
     width: 29px;
     height: 25px;
     filter: invert(100%);
+
+
 }
 
 .likor {
@@ -585,7 +590,7 @@ h3 {
 }
 
 .nav {
-    background-color: #111827;
+    background-color: #000b00;
 
     /* background: linear-gradient(to left, rgb(50, 157, 62), rgb(157, 205, 37)); */
     bottom: 0px;
@@ -617,7 +622,7 @@ h3 {
     top: 30px;
     height: 7px;
     width: 98%;
-    background-color: #000000;
+    background-color: #0f0f0f;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -659,6 +664,7 @@ h3 {
     justify-content: center;
     cursor: pointer;
     z-index: 999;
+    filter: invert(1);
 }
 
 .assebility> :nth-child(2) {
@@ -819,6 +825,7 @@ h3 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    filter: invert(100%);
 }
 
 .slider .volume {
@@ -869,14 +876,15 @@ h3 {
 }
 
 .cards.choosenone {
-    background-color: #EEB3B9;
+    background-color: #004800;
+    ;
     border: 3px white;
-    color: #502030;
+
 }
 
 
 .que ul li.hehe {
-    border: 3px solid gold;
+    border: 5px solid #004800;
 
 }
 
@@ -884,7 +892,7 @@ h3 {
     /* width: 98%; */
     top: 40px;
     position: relative;
-    width: 197%;
+    /* width: 197%; */
     display: flex;
 }
 
@@ -895,19 +903,29 @@ h3 {
 
 .shuffle {
     cursor: pointer;
+    position: relative;
+    /* left: 94%; */
+    filter: invert(1);
+    margin: 0px 11px 0px 0px;
 }
 
 .active {
-    background-color: gold;
+    background-color :#165d00;
+    filter: invert(0);
+       border-radius: 5px;
 }
 
+.peace {
+    display: none;
+    z-index: 999999999;
+}
 
 .centertimer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 28px;
+    margin-top: 47px;
 }
 
 
@@ -926,14 +944,19 @@ h3 {
 }
 
 #canceltimer {
-    background-color: red;
-    color: white;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 .timmings {
-    background-color: blue;
+
+    background: #09b307cc;
+    box-shadow: #21ab1f;
+    backdrop-filter: blur(5.5px);
+    /* background-color: #21ab1f; */
     width: 100%;
-    display: flex;
+    display: flex
+;
     justify-content: center;
     align-items: center;
     pointer-events: auto;
@@ -963,23 +986,28 @@ h3 {
 }
 
 .timerimg {
-    width: 12px;
+    width: 17px;
     height: 12px;
     position: relative;
-    top: 41px;
+    bottom: 9px;
     right: 27px;
 }
 
 .alert {
-    height: 44px;
-    width: 171px;
-    z-index: 999;
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 19px;
+    background-color: pink;
+    height: 100px;
+    border-radius: 4px;
+    z-index: 9999999;
     position: relative;
-    /* top: 70px; */
+    bottom: 122px;
     display: none;
 }
 
-.popups{
+.popups {
     display: flex;
     flex-direction: row;
 }
@@ -998,10 +1026,21 @@ h3 {
 
 
 .timeup {
-
+    /* 
     top: 50px;
     position: relative;
     z-index: 999999;
+    display: none; */
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 19px;
+    background-color: pink;
+    height: 100px;
+    border-radius: 4px;
+    z-index: 9999999;
+    position: relative;
+    bottom: 122px;
     display: none;
 }
 
@@ -1366,11 +1405,23 @@ h3 {
 
 
 .timercancel {
-    top: 50px;
+    /* top: 50px;
     z-index: 999999;
     height: 50px;
     width: 251px;
     position: relative;
+    display: none; */
+
+    font-family: "EB Garamond", serif;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 19px;
+    background-color: pink;
+    height: 100px;
+    border-radius: 4px;
+    z-index: 9999999;
+    position: relative;
+    bottom: 122px;
     display: none;
 
 }
@@ -1440,7 +1491,7 @@ h3 {
     padding: 12.5px 30px;
     border: 0;
     border-radius: 100px;
-    background-color: #2ba8fb;
+    background-color: #5fea99;
     color: #ffffff;
     font-weight: Bold;
     transition: all 0.5s;
@@ -1448,8 +1499,8 @@ h3 {
 }
 
 .btn-65:hover {
-    background-color: #6fc5ff;
-    box-shadow: 0 0 20px #6fc5ff50;
+    background-color: #5fea99;
+    box-shadow: 0 0 20px #0a5d58;
     transform: scale(1.1);
 }
 
@@ -1489,6 +1540,7 @@ h3 {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    text-shadow: 8px 4px 20px #00000091;
 }
 
 .tooltip {
@@ -1532,7 +1584,7 @@ svg:hover .tooltip {
 .uiverse:hover,
 .uiverse:hover .tooltip,
 .uiverse:hover .tooltip::before {
-    background: linear-gradient(320deg, rgb(3, 77, 146), rgb(0, 60, 255));
+    background: linear-gradient(#24A436, #69B429, #A1D021);
     color: #ffffff;
 }
 
@@ -1559,4 +1611,97 @@ svg:hover .tooltip {
 
 .inputtwo:focus {
     border: 2px solid grey;
+}
+
+
+
+
+
+.btn-42,
+.btn-42 *,
+.btn-42 :after,
+.btn-42 :before,
+.btn-42:after,
+.btn-42:before {
+    border: 0 solid;
+    box-sizing: border-box;
+}
+
+.btn-42 {
+    -webkit-tap-highlight-color:
+        transparent;
+    -webkit-appearance: button;
+    background-color:
+        #000;
+    background-image: none;
+    color:
+        #fff;
+    cursor: pointer;
+    font-family: ui-sans-serif, system-ui, -apple-system;
+    font-size: 100%;
+    border-radius: 6px;
+    margin: 0;
+    -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+    padding: 0;
+}
+
+.btn-42:disabled {
+    cursor: default;
+}
+
+.btn-42:-moz-focusring {
+    outline: auto;
+}
+
+.btn-42 svg {
+    display: block;
+    vertical-align: middle;
+}
+
+.btn-42 [hidden] {
+    display: none;
+}
+
+.btn-42 {
+    margin: auto;
+    height: 37px;
+    width: 95px;
+    /* text-align: center; */
+    /* border-radius: 999px; */
+    top: 12px;
+    box-sizing: border-box;
+    display: block;
+    font-weight: 600;
+    -webkit-mask-image: none;
+    /* padding: 11px 85px; */
+    position: relative;
+    text-transform: uppercase;
+}
+
+.btn-42 span {
+    mix-blend-mode: difference;
+}
+
+.btn-42:before {
+    --thickness: 4px;
+    border: var(--thickness) solid #fff;
+    /* border-radius: 77px; */
+    border-radius: 12px;
+    content: "";
+    inset: calc(var(--thickness) * -1);
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    /* transform: scale(1.3); */
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-42:hover:before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.btn-42:hover {
+    background-color:
+        transparent;
 }

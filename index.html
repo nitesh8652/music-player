@@ -39,9 +39,16 @@
             <h3> Library</h3>
             <div class="library">
                 <ul>
-                    <li><img src="assets/home.svg" alt="home">
-                        <span class="centior">Home</span>
+                    <li class="libraryitem">
+                        <!-- <label for="timer" class="timerimg"> -->
+                            <img src="assets/sleeptimer.svg" alt="home"  class="timerimg">
+                            <span class="centior timerimg"> Timer</span>
+                        <!-- </label> -->
                     </li>
+
+
+
+
                     <li>
                         <img src="assets/globe.svg" alt="like">
                         <span class="likor"> Go Online </span>
@@ -170,20 +177,18 @@
                         </svg>
                     </label>
                 </div>
+                
 
                 <div class="essentials">
                     <img src="assets/shuffle.svg" alt="shuffle" class="shuffle">
-
-
-
                 </div>
 
 
-                <label for="timer" class="timerimg">
+                <!-- <label for="timer" class="timerimg">
 
                     <img src="assets/sleeptimer.svg" alt="sleeptimer">
 
-                </label>
+                </label> -->
 
 
                 <div class="informationn">
@@ -209,7 +214,7 @@
                     <input type="number" id="timer" min="1" placeholder="Enter Minutes" class="inputtwo">
                     <div class="timeressential">
                         <button id="settimer" class="uiverse"> Set Timer</button>
-                        
+
                         <button id="canceltimer" class="uiverse">
                             <span>Cancel Timer</span>
                         </button>
@@ -222,38 +227,22 @@
                         <div class="popups">
                             <div class="alert">
                                 Enter A Valid Number!
-                                <button class="ok">ok</button>
+                                <button class="ok btn-42">
+                                    <span>Ok</span>
+                                </button>
 
                             </div>
                             <div class="timeup">
                                 Time's Up Have A Good Sleep
-                                <button class="timeupbtn">Close</button>
+                                <button class="timeupbtn btn-42">Close</button>
 
-                                <div aria-label="Orange and tan hamster running in a metal wheel" role="img"
-                                    class="wheel-and-hamster">
-                                    <div class="wheel"></div>
-                                    <div class="hamster">
-                                        <div class="hamster__body">
-                                            <div class="hamster__head">
-                                                <div class="hamster__ear"></div>
-                                                <div class="hamster__eye"></div>
-                                                <div class="hamster__nose"></div>
-                                            </div>
-                                            <div class="hamster__limb hamster__limb--fr"></div>
-                                            <div class="hamster__limb hamster__limb--fl"></div>
-                                            <div class="hamster__limb hamster__limb--br"></div>
-                                            <div class="hamster__limb hamster__limb--bl"></div>
-                                            <div class="hamster__tail"></div>
-                                        </div>
-                                    </div>
-                                    <div class="spoke"></div>
-                                </div>
-
+                               
                             </div>
 
                             <div class="timercancel">
                                 Sleep TImer Was Cancelled
-                                <button class="timercancelbtn">Close</button>
+                                <button class="timercancelbtn btn-42">
+                                    Close</button>
                             </div>
                         </div>
 
@@ -368,13 +357,27 @@
 
 
 
-    <!-- <div class="nav">
-        <div class="kili">
-            <div class="asscebility"></div>
+    <div class="peace">
+        <div aria-label="Orange and tan hamster running in a metal wheel" role="img"
+            class="wheel-and-hamster">
+            <div class="wheel"></div>
+            <div class="hamster">
+                <div class="hamster__body">
+                    <div class="hamster__head">
+                        <div class="hamster__ear"></div>
+                        <div class="hamster__eye"></div>
+                        <div class="hamster__nose"></div>
+                    </div>
+                    <div class="hamster__limb hamster__limb--fr"></div>
+                    <div class="hamster__limb hamster__limb--fl"></div>
+                    <div class="hamster__limb hamster__limb--br"></div>
+                    <div class="hamster__limb hamster__limb--bl"></div>
+                    <div class="hamster__tail"></div>
+                </div>
+            </div>
+            <div class="spoke"></div>
         </div>
-    </div> -->
-
-
+    </div>
 
     <script src="script.js"></script>
 
