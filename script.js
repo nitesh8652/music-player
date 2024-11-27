@@ -406,7 +406,30 @@ document.querySelector(".input").addEventListener("input",event=>{
 })
 
 
+const x = document.querySelector(".left");
+const y = document.querySelector(".closre")
+const z = document.querySelector(".hamburger")
+document.querySelector(".hamburger").addEventListener("click",()=>{
+//     x.style.display="inline-block";
+//    x.style.right="3%"
 
+if (x.style.display === "inline-block") {
+    // If it's currently displayed, hide it
+    x.style.display = "none";
+} else {
+    // Otherwise, show it
+    x.style.display = "inline-block";
+    x.style.right = "3%";
+    y.style.display="inline-block";
+    z.style.display="none";
+}
+})
+
+document.querySelector(".closre").addEventListener("click",()=>{
+    x.style.display="none";
+    y.style.display="none";
+    z.style.display="inline-block";
+})
 
 
 

@@ -791,8 +791,8 @@ h3 {
     justify-content: start;
     align-items: center;
     height: 27px;
-    width: 98%;
-    margin-left: 12px;
+    width: 83%;
+    /* margin-left: 12px; */
     /* background-color: blue;
 
 }
@@ -1491,8 +1491,8 @@ h3 {
     padding: 12.5px 30px;
     border: 0;
     border-radius: 100px;
-    background-color: #5fea99;
-    color: #ffffff;
+    background-color: #ff0000;
+    color: #000000;
     font-weight: Bold;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -1704,4 +1704,82 @@ svg:hover .tooltip {
 .btn-42:hover {
     background-color:
         transparent;
+}
+
+
+
+
+.menu{
+    display: none;
+}
+
+.closre{
+    display: none;
+}
+
+
+@media (2px <= width <= 1254px) {
+
+
+
+
+.left{
+    background-color: #21ab1f;
+    position: absolute;
+    right: -95%;
+    transition: all 1s ease-in-out;
+    z-index: 6;
+    /* 108 */
+    display: none;
+}
+
+.closre{
+    display: none;
+    right:4px;
+    top: 12px;
+    position: absolute;
+    height: 50px;
+ 
+}
+
+.menu{
+    display: block;
+    
+}
+
+
+.hamburger{
+           right: 4px;
+        top: 23px;
+        position: absolute;
+        height: 44px;
+        width: 59px;
+}
+
+
+/* .nav{
+    top: 606px;
+} */
+
+
+.sleeptimer {
+    left: 35%;
+}
+
+.input{
+    position: relative;
+    left: 100px;
+}
+
+
+
+
+.searchbtn {
+    left: 28px;
+
+}
+
+
+
+
 }
