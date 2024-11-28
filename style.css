@@ -595,7 +595,7 @@ h3 {
     /* background: linear-gradient(to left, rgb(50, 157, 62), rgb(157, 205, 37)); */
     bottom: 0px;
     /* top: 617px; */
-    width: 1014px;
+    width: 1026px;
     height: 85px;
     border-radius: 15px 15px 0px 0px;
     display: flex;
@@ -884,7 +884,7 @@ h3 {
 
 
 .que ul li.hehe {
-    border: 5px solid #004800;
+    border: 5px solid #249724;
 
 }
 
@@ -910,9 +910,9 @@ h3 {
 }
 
 .active {
-    background-color :#165d00;
+    background-color: #165d00;
     filter: invert(0);
-       border-radius: 5px;
+    border-radius: 5px;
 }
 
 .peace {
@@ -955,8 +955,7 @@ h3 {
     backdrop-filter: blur(5.5px);
     /* background-color: #21ab1f; */
     width: 100%;
-    display: flex
-;
+    display: flex;
     justify-content: center;
     align-items: center;
     pointer-events: auto;
@@ -1709,76 +1708,295 @@ svg:hover .tooltip {
 
 
 
-.menu{
+.menu {
     display: none;
 }
 
-.closre{
+.closre {
     display: none;
 }
 
 
-@media (2px <= width <= 1254px) {
+@media (2px <=width <=1254px) {
+
+    .left {
+           position: absolute;
+        right: -95%;
+        transition: all 1s ease-in-out;
+        z-index: 6;
+        /* 108 */
+        display: none;
+    }
+
+    .closre {
+        display: none;
+        right: 4px;
+        top: 12px;
+        position: absolute;
+        height: 50px;
+
+    }
+
+    .menu {
+        display: block;
+
+    }
 
 
-
-
-.left{
-    background-color: #21ab1f;
-    position: absolute;
-    right: -95%;
-    transition: all 1s ease-in-out;
-    z-index: 6;
-    /* 108 */
-    display: none;
-}
-
-.closre{
-    display: none;
-    right:4px;
-    top: 12px;
-    position: absolute;
-    height: 50px;
- 
-}
-
-.menu{
-    display: block;
-    
-}
-
-
-.hamburger{
-           right: 4px;
+    .hamburger {
+        right: 4px;
         top: 23px;
         position: absolute;
         height: 44px;
         width: 59px;
-}
+    }
 
 
-/* .nav{
+    /* .nav{
     top: 606px;
 } */
 
 
-.sleeptimer {
-    left: 35%;
+    .sleeptimer {
+        left: 35%;
+    }
+
+    .input {
+        position: relative;
+        left: 100px;
+        border-radius: 12px;
+    }
+
+    .searchbtn {
+        left: 28px;
+
+    }
+
 }
 
-.input{
-    position: relative;
-    left: 100px;
+
+@media (2px <=width <=1020px) {
+
+    /* body {
+        background-color: #2f2;
+    } */
+
+    .nav {
+        width: 795px;
+    }
+
+    .cardcontainer {
+        width: 82%;
+    }
+
+    .logo ul li {
+        font-size: 28px;
+    }
+
+    .logo img {
+        height: 46px;
+        width: 50px;
+    }
+
+
+    .logo {
+        margin: 10px 0px 1px 0px
+    }
+
+    .input {
+        width: 270px;
+        left: 110px;
+    }
+
+    .searchbtn {
+        left: 40px;
+    }
+
+    .hamburger {
+        right: 17px;
+        height: 41px;
+    }
+
+    .center {
+        width: 795px;
+    }
+
+
+    .cardcontainer {
+        justify-content: center;
+        display: flex;
+        width: 82%;
+        position: relative;
+        left: 45px;
+    }
+
+    .cards {
+        width: 140px;
+        height: 204px;
+    }
+
+
+    .cards img {
+        height: 82px;
+    }
+
+    .cards>* {
+        padding-top: 6px;
+    }
+
+    .cards p,
+    h3 {
+        font-size: 13px;
+        margin: 7px;
+        bottom: 15px;
+
+    }
+
+    .albu {
+        font-size: 22px;
+    }
+
+}
+
+@media (2px <=width <=776px) {
+
+    /* body {
+        background-color: #004800;
+    } */
+
+    .logo ul li {
+        display: none;
+        font-size: 28px;
+    }
+
+    .nav {
+        right: 7px;
+        /* top: 31px; */
+        width: 383px;
+        width: calc(100% - 10px);
+
+    }
+
+    .essentials {
+        left: 120px;
+    }
+
+    .trackinfo {
+        font-size: 12px;
+    }
+
+
+    .informationn {
+        width: 95%;
+    }
+
+
+    .cards {
+        width: 187px;
+        height: 240px;
+    }
+
+    .cards>* {
+        padding-top: 16px;
+    }
+
+    /* .btn-95 {
+    height: 38px;
+    width: 39px;} */
+
+    .trackinfo {
+        width: 75%;
+        font-size: 12px;
+    }
+
+    .input {
+        width: 200px;
+        left: 15px;
+        font-size: 12px;
+    }
+
+    .searchbtn {
+        left: -48px;
+        width: 40px;
+        height: 41px;
+    }
+
+    .searchbtn svg {
+        position: relative;
+        left: -3px;
+        
+    }
+
+    .nav {
+        height: 95px;
+    }
+
+    .playbar {
+
+        top: 43px;
+    }
+
+    .essentials {
+        left: 120px;
+        top: 53px;
+    }
+    
+    .assebility {
+        top: 55px;
+    }
+
+
+.volumenav {
+    top: 52px;
+    height: 43px;
+    right: 117px;
+    width: 112px;
+}
+
+.center{
+    width: 100%;
+}
+
+
+
+.hamburger {
+    right: 1px;
+    height: 36px;
 }
 
 
 
 
-.searchbtn {
-    left: 28px;
+.cardcontainer {
 
+    left: 0px;
 }
 
+.sleeptimer{
+    z-index: 99999;
+}
+
+
+.left{
+
+        width: 250px;
+}
+
+
+.que ul li {
+    width: 209px};
+
+.playmini{
+    width: 56px;
+    height: 30px;
+}
+
+
+
+
+.sleeptimer{
+    width: 61%;
+}
 
 
 
