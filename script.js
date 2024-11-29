@@ -15,7 +15,7 @@ let trebleFilter;
 async function fetchingsngs() {
 
 
-    let a = await fetch("https://github.com/nitesh8652/music-player/tree/main/songs")
+    let a = await fetch("/songs/")
     let response = await a.text()
     console.log(response)
 
@@ -242,7 +242,7 @@ async function main() {
     // let currentsong = new Audio();
 
     async function fetchSongs() {
-        let response = await fetch("https://github.com/nitesh8652/music-player/tree/main/songs");
+        let response = await fetch("/songs/");
         let text = await response.text();
         let container = document.createElement("div");
         container.innerHTML = text;
